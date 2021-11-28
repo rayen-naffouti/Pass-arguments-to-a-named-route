@@ -51,6 +51,12 @@ class ExtractArgumentsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MaterialApp(
+      routes: {
+        ExtractArgumentsScreen.routeName: (context) =>
+            const ExtractArgumentsScreen(),
+      },
+    );
     // Extract the arguments from the current ModalRoute
     // settings and cast them as ScreenArguments.
     final args = ModalRoute.of(context)!.settings.arguments as ScreenArguments;
